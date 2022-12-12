@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 int main(){
@@ -9,7 +8,7 @@ int main(){
     cin >> num;
     n = num;
     
-    do {
+    do{
         digit = num % 10;
         rev = (rev * 10) + digit;
         num = num / 10;
@@ -17,7 +16,7 @@ int main(){
 
     cout << "The reverse of the number is: " << rev << endl;
     
-    if(n== rev){
+    if(n == rev){
         cout << "The number is a palindrome";
     }else{
         cout << "The number is not a palindrome";
