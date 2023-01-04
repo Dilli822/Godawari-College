@@ -7,7 +7,7 @@ int main(){
 
     vowels = consonants = digits = spaces = 0;
 
-    cout << "Enter a line of string";
+    cout << "Enter a line of string: ";
     //The C++ getline() is an in-built function defined in the <string. h> header file that allows accepting and reading single and multiple line strings from the input stream. In C++, the cin object also allows input from the user, but not multi-word or multi-line input.
     cin.getline(line, 150);
 
@@ -16,13 +16,13 @@ int main(){
         || line[i] == 'A' || line[i] == 'E' || line[i] == 'I' || line[i] == 'O' || line[i] == 'U' ){
             ++vowels;
         }
-        else if((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'a' && line[i] <= 'z')){
+        else if((line[i] >= 'a' && line[i] <= 'z') || (line[i] >= 'A' && line[i] <= 'z')){
             ++consonants;
         }
-        else if(line[i] >='O' && line[i] <='z' || (line[i]>='A' && line[i]<='Z')){
+        else if(line[i] >='O' && line[i] <='9' ){
             ++digits;
         }
-        else if(line[i] == '/0'){
+        else if(line[i] == '\0'){
             ++spaces;
         }
     }
