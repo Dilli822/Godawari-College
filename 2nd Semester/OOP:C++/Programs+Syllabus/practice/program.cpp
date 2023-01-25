@@ -1,94 +1,99 @@
-#include<iostream>
-using namespace std;
 
-// global variable
-int arr[5];
-int check_input;
+// #include <iostream>
+// #include<string>
+// using namespace std;
 
-int largestArray(){
-    for(int i = 0; i<5; i++){
-        if(arr[0] < arr[i]){
-            arr[0] = arr[i];
-        }
-    }
+// // global variable
+// string sem;
 
-    cout << "Largest element in array is " << arr[0] << endl;
-    return 0;
-}
+// class Student{
+//     public:
+//       int totalStudents;
+//       int totalSubjects;
 
-int reverseArray(){
-    // cout << "Array elements are " << endl;
-
-    // for(int i = 0; i<5; i++){
-    //     cout << arr[i] << endl;
-    // }
-
-    cout << "reverse numbers are " << endl;
-    for(int i = (5-1); i>=0; i--){
-
-        cout << arr[i] << endl;
-    }
+//     int records(int totalStudents){
+//         if(sem == "first"){
+//             cout << "total students in " << sem << ":" << totalStudents << endl;
+//         }
+//         else if(sem == "second"){
+//             cout << "total students in " << sem << ":" << totalStudents << endl;
+//         }
+//         else if(sem == "third"){
+//             cout << "total students in " << sem << ":" << totalStudents << endl;
+//         }
+//         return 0;
+//     }
     
-    return 0;
-}
+// };
 
+// class MyClass{
 
-int evenOddArr(){
-    cout << "Even numbers are:" << endl;
-    for(int i = 0; i<5; i++){
-        if(arr[i] % 2 == 0){
-            cout << arr[i] << ",";
-        }
+// };
 
-    }
-    cout << " " << endl;
-    cout << "Odd Elements are: " << endl;
+// int main() {
+//     // Student *firstSem = new Student;
+//     // Student *newFirstSem = firstSem;
 
-    for(int i = 0; i<5; i++){
-        if(arr[i] % 2 != 0){
-            
-            cout << arr[i] << ", ";
-        }
+//     Student firstSem,SecondSem,ThirdSem;
+//     firstSem.records(29);
+//     SecondSem.records(26);
+//     ThirdSem.records(24);
+//     cout << "Enter which Semester do you want to print out the student details? first ,second or third " << endl;
+//     cin >> sem;
+    
+//   return 0;
+// }
+
+// Program to print positive number entered by the user
+// If the user enters a negative number, it is skipped
+// Program to print positive number entered by the user
+// If the user enters a negative number, it is skipped
+
+#include <iostream>
+using namespace std;
+class Student{
+    public:
+    int totalStudent = 0;
+    int totalSubject = 0;
+    int girls = 0;
+    int boys = 0;
+    int busStudent = 0;
+ 
+    public:
+    int print(string sem){
         
+        cout << sem << endl;
+        cout << "-----------------------------" << endl;
+        cout << "TotalStudent " << totalStudent << endl<< "TotalSubject " << totalSubject << endl<< "No.of Girls " << girls << endl << "No.of boys " << boys << endl << "No.of Bus Students " << busStudent << endl;
+        cout << "========================================" << endl;
+        return 0;
     }
-    return 0;
+};
+int main() {
+    cout << "Godawari College Semester Records " << endl;
+    Student firstSem,SecondSem,ThirdSem;
+    firstSem.print("First Semester");
+    firstSem.totalStudent = 30;
+    firstSem.totalSubject = 5;
+    firstSem.girls = 10;
+    firstSem.boys = 20;
+    firstSem.busStudent = 9;
+    
+    
+    SecondSem.print("Second Semester");
+    SecondSem.totalStudent = 26;
+    SecondSem.totalSubject = 5;
+    SecondSem.girls = 0;
+    SecondSem.boys = 26;
+    SecondSem.busStudent = 18;
+    
+    
+    ThirdSem.print("Third Semester");
+    ThirdSem.totalStudent = 33;
+    ThirdSem.totalSubject = 5;
+    ThirdSem.girls = 13;
+    ThirdSem.boys = 20;
+    ThirdSem.busStudent = 12;
+
+   return 0;
 }
-
-int main(){
-   cout << "Enter 1 or 2 or 3 to Choose any one program among 3. \n 1. find the largest element from an array with input 5 \n 2. find odd or even number. \n 3. find the reverse elements array.\n Press any key to simply to Not run any program." << endl;
-   cin >> check_input;
-
-   if(check_input == 1 || check_input == 2 || check_input == 3){
-    cout << "Enter any five numbers: "; 
-    for(int i = 0; i<5; i++){
-        cin >> arr[i];
-    }
-   }
-   else{
-    cout << "Program is shutting down because ";
-   }
-
-
-    switch (check_input){
-    case 1:
-        largestArray();
-        break;
-
-    case 2:
-       cout << "program 2:" << endl;
-       evenOddArr();
-       break;
-
-    case 3:
-       cout << "program 3:"<< endl;
-       reverseArray();
-       break;
-
-    default:
-      cout << "You didnot enter 1 or 2 or 3." << endl;
-        
-    }
-
-    return 0;
- }
-

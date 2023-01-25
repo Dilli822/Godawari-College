@@ -15,13 +15,13 @@ class Count{
     // overload ++ when used as prefix
     void operator ++(){
         ++value;
-        cout << "value from operator ++ is " << value << endl;
+        //cout << "value from operator ++ is " << value << endl;
     }
 
     // overload ++ when used as postfix
     void operator ++(int){
         value++;
-        cout << "value from operator ++ int () is " << value << endl;
+        //cout << "value from operator ++ int () is " << value << endl;
     }
 
     void display(){
