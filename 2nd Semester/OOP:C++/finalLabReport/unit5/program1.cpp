@@ -43,27 +43,9 @@ class PremiumCustomer: public Customer {
 };
 
 int main() {
-    string name,address,phone;
-    int loyaltyPoints;
-    cout <<"============Enter Details for Normal customers========" << endl;
-    cout << "Enter customer name: " << endl; 
-    cin >> name;
-    cout << "Enter customer address: " << endl; 
-    cin >> address;
-    cout  << "Enter customer phone: "  << endl; 
-    cin >> phone;
-    Customer c1(name,address,phone);
+    Customer c1("sapal","itahari","981234567");
 
-    cout <<"============Enter Details for permium customers========" << endl;
-    cout << "Enter customer name: " << endl; 
-    cin >> name;
-    cout << "Enter customer address: " << endl; 
-    cin >> address;
-    cout  << "Enter customer phone: "  << endl; 
-    cin >> phone;
-    cout  << "Enter Permium customer loyalty points: "  << endl; 
-    cin >> loyaltyPoints;
-    PremiumCustomer c2(name, address, phone, loyaltyPoints);
+    PremiumCustomer c2("dilli", "itahari", "9862231468", 8.5);
 
   c1.printDetails();
   cout << endl;
