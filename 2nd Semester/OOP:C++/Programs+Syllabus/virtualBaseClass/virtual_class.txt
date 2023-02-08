@@ -1,0 +1,15 @@
+if class a is base and class b and class c is child class 
+which is inheriting class a and there is class d which is 
+inheriting class b and c , here data members and function 
+of class a is copied in both class b and c and again data 
+members and function of class a and class b both is copied 
+in class d . this will cause ambiguity and to remove this
+problem we use virtual base class.
+Yes, that is correct. When multiple classes inherit from 
+a common base class, the base class members are replicated
+in all the child classes, leading to ambiguity. 
+Virtual base classes allow for the removal of this ambiguity 
+by ensuring that the members of the base class are only 
+inherited once, even if multiple child classes inherit
+from it. This helps to avoid data duplication and provides
+a cleaner inheritance hierarchy.
