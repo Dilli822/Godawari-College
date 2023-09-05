@@ -1,0 +1,30 @@
+STRUCTURE
+The keyword struct is used to define a structure When a variable is associated with a structure, the compiler allocates the memory for each member. The size of structure is greater than or equal to the sum of
+sizes ofits members. Each member within a structure is assigned unique
+storage area of location. Altering the value of a member will not affed other
+members of the structure.
+Individual member can be accessed ata time.
+Several members of a structure can initialize at once.
+
+UNION
+The keyword union is used to define a union. when a variable is associated with a union, the compiler allocates the memory by consideringthe size of the largest memory. So, size of union is equal to the size
+oflargestmember. Memory allocated is shared by individual members of
+union. Altering the value of any of the member will alter other
+member values.
+Only one member can be accessed at a time.
+Only the first member of a union can be initialized.
+
+ table that highlights the differences between a struct and a union in C:
+
+Struct	Union
+Purpose	Grouping related data together	Sharing the same memory space for members
+Memory	Each member has its own memory space	All members share the same memory space
+Access	Can access multiple members at once	Can access only one member at a time
+Size	Size is the sum of member sizes	Size is determined by the largest member
+Initialization	Each member can be individually initialized	Only the first member can be initialized
+Memory Usage	Potentially larger memory footprint	More memory-efficient in some cases
+Usage	Suitable for representing objects	Suitable for representing alternative interpretations of data
+Type Safety	Provides type safety	Requires careful handling to avoid type-related issues
+These are some of the key differences between structs and unions in C. Structs are commonly used to group related data together and represent objects, while unions are useful when you need to share memory space between different data types or when you want to represent alternative interpretations of data.
+
+It's important to note that the choice between using a struct or a union depends on the specific requirements of your program and the data you need to work with.
