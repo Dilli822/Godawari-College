@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let sushil = "student";
+        if (sushil) {
+            console.log("true")
+        } else {
+            console.log("false")
+        }
+
+        // wap that counts from 0 to 27 and prints
+        for(let i = 0; i < 28; i++){
+            console.log(i)
+        }
+
+        // to check if the given nubmer is prime
+        // program to check if a number is prime or not
+
+// take input from the user
+
+let isPrime = true;
+function checkPrime(num){
+    if(num === 1){
+        console.log("nor primr nor composite")
+    }
+
+    for(i = 2 ; i < num; i++){
+        if(i % 2 == 0){
+            isPrime = false;
+            break;
+        }
+    }
+
+    if(isPrime == false)
+    {
+        console.log("not a prime")
+    }else{
+        console.log("is a prime");
+    }
+}
+checkPrime(2)
+checkPrime(36)
+
+// statements, variables, expressions, keyword, block and operator, for, looping, functions, popup box, alert, confirm, prompt
+
+    </script>
+</body>
+</html>
