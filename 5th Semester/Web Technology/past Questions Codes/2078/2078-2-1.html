@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>External CSS Example</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<p id="p1">Paragraph 1</p>
+<p id="p2">Paragraph 2</p>
+
+<div id="dv1">Div Content</div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Query Example</title>
+  <style>
+    body {
+      background-color: lightblue;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-color: lightpink;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>This is a responsive page.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iframe Example</title>
+</head>
+<body>
+  <p>This paragraph contains an iframe from TUIOST website.</p>
+  <iframe src="http://www.tuiost.edu.np" width="400" height="200"></iframe>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="iost website">  <title>iost</title>
+</head>
+<body>
+  <div>
+    <a href="http://www.tuiost.edu.np">
+      <img src="your_image.jpg" alt="iost website"> </a>
+  </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery ID Selector</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <button id="hideButton">Hide Paragraph</button>
+    <p id="myParagraph">This is a paragraph.</p>
+
+    <script>
+        $(document).ready(function() {
+            $("#hideButton").click(function() {
+                $("#myParagraph").hide();
+            });
+        });
+
+        // Hide the element
+$("#myDiv").hide();
+
+// Show the element
+$("#myDiv").show();
+
+// Toggle the element's visibility
+$("#myDiv").toggle();
+    </script>
+</body>
+</html>
+
+// Hide the element
+$("#myDiv").hide();
+
+// Show the element
+$("#myDiv").show();
+
+// Toggle the element's visibility
+$("#myDiv").toggle();
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 200px;
+            border: 5px solid blue;
+            padding: 15px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        This is a div element.
+    </div>
+</body>
+
+</html>
+
+
+
+GENERATE 15, 3                  // Create a customer every 15±3 minutes
+QUEUE SEAT                     // Customer joins the queue
+SEIZE BARBER                   // Customer seizes the barber (facility)
+DEPART SEAT                    // Customer leaves the queue
+ADVANCE 18, 2                  // Haircut takes 18±2 minutes
+RELEASE BARBER                 // Barber is free
+TERMINATE 1                    // Customer leaves the barbershop
+
+FACILITY BARBER 1              // Declare barber as a facility with capacity 1

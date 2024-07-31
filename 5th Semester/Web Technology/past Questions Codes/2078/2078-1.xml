@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+  <employee id="1">
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <salary>50000</salary>
+    <address>
+      <street>123 Main St</street>
+      <city>Anytown</city>
+      <state>CA</state>
+      <zip>12345</zip>
+    </address>
+    <phone>(123) 456-7890</phone>
+    <email>johndoe@example.com</email>
+  </employee>
+  </employees>

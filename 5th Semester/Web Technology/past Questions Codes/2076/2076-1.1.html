@@ -1,0 +1,54 @@
+<!-- 
+How positioning of HTML elements can be done using CSS? Create a HTML page with a div with some content and two
+paragraph with some contents having id p1 and p2. Write external CSS for the div tag having fixed position with border
+style solid and width 2px. the p1 should have relative position. The font type of p1 should be Arial and color should be
+red. The p2 have absolute position with top 0px and left 200px. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positioning Example</title>
+<style>
+    /* External CSS for positioning */
+
+#container {
+    position: relative;
+    border: 2px solid #000;
+    width: 600px;
+    padding: 20px;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+#p1 {
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: red;
+}
+
+#p2 {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+    <h2>Positioning Example</h2>
+    <div id="content">
+        <p id="p1">Paragraph 1 with relative position</p>
+        <p id="p2">Paragraph 2 with absolute position</p>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* External CSS styles */
+
+#p1, #p2 {
+    display: block;
+    margin-top: 100px;
+    margin-left: 80px;
+}
+
+#dv1 {
+    padding: 10px 25px; /* Padding left and right */
+    background-color: blue;
+    color: red;
+    font-family: Verdana, sans-serif;
+    display: none; /* Initially hidden */
+}

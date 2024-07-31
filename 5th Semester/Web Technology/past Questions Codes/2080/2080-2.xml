@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definition of the Person element -->
+    <xs:element name="Person">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Definition of the Age element -->
+                <xs:element name="Age">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="10"/>
+                            <xs:maxInclusive value="20"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                
+                <!-- Definition of the Name element -->
+                <xs:element name="Name">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Ram"/>
+                            <xs:enumeration value="Shyam"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                
+                <!-- Definition of the Pincode element -->
+                <xs:element name="Pincode">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:length value="3"/>
+                            <xs:pattern value="[0-9]{3}"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>
+
+<!-- Explanation of Simplified XSD:
+xs
+: Defines the XML Schema namespace.
+xs
+name="Person": Defines the root element of the XML document as Person.
+xs
+: Specifies that Person contains a sequence of child elements.
+xs
+: Specifies the order and occurrence of child elements (Age, Name, Pincode).
+xs
+name="Age" type="xs
+": Defines Age as an integer type.
+xs
+name="Name": Defines Name as a string type with restricted values using <xs:restriction>.
+xs
+: Specifies allowable values for Name as "Ram" or "Shyam".
+xs
+name="Pincode": Defines Pincode as a string type with restrictions on length (<xs:length>) and pattern (<xs:pattern>).
+xs
+value="3": Specifies that Pincode must be exactly 3 characters long.
+xs
+value="[0-9]{3}": Specifies that Pincode must consist of exactly three digits.
+This simplified XSD schema ensures that any XML document validated against it will adhere to the specified restrictions on Age, Name, and Pincode. Adjustments can be made as per your specific validation requirements. -->
+
+<!-- 
+https://www.javatpoint.com/html-vs-xml -->
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Person>
+    <Age>15</Age>
+    <Name>Ram</Name>
+    <Pincode>123</Pincode>
+</Person>
+
+
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Age" type="xs:int">
+          <xs:annotation>
+            <xs:documentation>Age must be between 10 and 20</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:int">
+            <xs:minInclusive value="10"/>
+            <xs:maxInclusive value="20"/>
+          </xs:restriction>
+        </xs:element>
+        <xs:element name="Name">
+          <xs:annotation>
+            <xs:documentation>Name must be either Ram or Shyam</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Ram"/>
+              <xs:enumeration value="Shyam"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Pincode" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Pincode must be exactly 3 digits</xs:documentation>
+          </xs:annotation>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d{3}"/>
+          </xs:restriction>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
+
+
+

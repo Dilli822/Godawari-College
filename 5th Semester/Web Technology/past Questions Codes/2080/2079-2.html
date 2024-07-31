@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation Example</title>
+<style>
+    .error {
+        color: red;
+    }
+</style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm" onsubmit="return validateForm()">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br>
+    <span id="usernameError" class="error"></span><br><br>
+    
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br>
+    <span id="passwordError" class="error"></span><br><br>
+    
+    <fieldset>
+        <legend>Hobbies:</legend>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Reading">
+        <label for="hobby1">Reading</label><br>
+        
+        <input type="checkbox" id="hobby2" name="hobbies" value="Gaming">
+        <label for="hobby2">Gaming</label><br>
+        
+        <input type="checkbox" id="hobby3" name="hobbies" value="Sports">
+        <label for="hobby3">Sports</label><br>
+        
+        <input type="checkbox" id="hobby4" name="hobbies" value="Cooking">
+        <label for="hobby4">Cooking</label><br>
+    </fieldset>
+    <span id="hobbiesError" class="error"></span><br><br>
+    
+    <input type="submit" value="Register">
+</form>
+
+<script>
+function validateForm() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var hobbies = document.getElementsByName("hobbies");
+    var hobbiesChecked = false;
+
+    // Reset errors
+    document.getElementById("usernameError").innerHTML = "";
+    document.getElementById("passwordError").innerHTML = "";
+    document.getElementById("hobbiesError").innerHTML = "";
+
+    var valid = true;
+
+    // Validate username
+    if (username.trim() === "") {
+        document.getElementById("usernameError").innerHTML = "Username is required";
+        valid = false;
+    }
+
+    // Validate password
+    if (password.length < 5) {
+        document.getElementById("passwordError").innerHTML = "Password must be at least 5 characters";
+        valid = false;
+    }
+
+    // Validate hobbies checkbox
+    for (var i = 0; i < hobbies.length; i++) {
+        if (hobbies[i].checked) {
+            hobbiesChecked = true;
+            break;
+        }
+    }
+
+    if (!hobbiesChecked) {
+        document.getElementById("hobbiesError").innerHTML = "Please select at least one hobby";
+        valid = false;
+    }
+
+    return valid;
+}
+</script>
+
+</body>
+</html>

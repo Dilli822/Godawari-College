@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List of Items</title>
+</head>
+<body>
+    <ol>
+        <li>Coffee :
+            <ol>
+                <li>I. Black coffee</li>
+                <li>II. Green coffee</li>
+            </ol>
+        </li>
+        <li>Tea :
+            <ol>
+                <li>A. Black tea</li>
+                <li>B. Green tea</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Canvas Example</title>
+</head>
+<body>
+<div id="dv1">
+<canvas id="mycanvas" width="300" height="200"></canvas>
+</div>
+</body>
+</html>
+
+
+<div id="heading">This is a heading</div>
+#heading {
+  color: red;
+  font-size: 24px;
+}
+
+
+<p class="highlight">This is a highlighted paragraph.</p>
+<div class="highlight">This is a highlighted div.</div>
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Animate Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div id="myDiv">This is a div</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#myDiv").css({
+        position: "absolute",
+        left: 0
+      });
+
+      $("#myDiv").animate({ left: "+=300px" }, 1000);
+    });
+  </script>
+</body>
+</html>
+
+<book>
+    <title>The Lord of the Rings</title>
+    <author>J.R.R. Tolkien</author>
+</book>
+<person>
+    <title>Dr. John Doe</title>
+    <name>John Doe</name>
+    <address>123 Main St</address>
+</person>
+Here, the element "title" has two different meanings.
+
+<bookstore xmlns:bk="http://www.example.com/book">
+    <bk:book>
+        <bk:title>The Lord of the Rings</title>
+            <bk:author>J.R.R. Tolkien</author>
+    </bk:book>
+</bookstore>
+<person xmlns:p="http://www.example.com/person">
+    <p:title>Dr. John Doe</p>
+        <p:name>John Doe</p>
+            <p:address>123 Main St</address>
+</person>
+
+In this example:
+
+xmlns:bk="http://www.example.com/book" declares a namespace with prefix "bk" and URI "http://www.example.com/book".
+xmlns:p="http://www.example.com/person" declares another namespace with prefix "p" and URI
+"http://www.example.com/person".
+The elements bk:title and p:title clearly differentiate between the two meanings of "title".
+By using namespaces, we can effectively combine different XML vocabularies without causing conflicts, ensuring clarity
+and accuracy in the data.
+
+
+// Using array() function
+$integerArray = array(1, 2, 3, 4, 5);
+
+// Using short array syntax
+$integerArray = [1, 2, 3, 4, 5];

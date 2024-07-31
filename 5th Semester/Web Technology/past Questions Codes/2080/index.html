@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Keypress Event</title>
+</head>
+
+<body>
+    <p id="message"></p>
+
+    <script>
+        document.addEventListener('keypress', function (event) {
+            document.getElementById("message").textContent = "Hello, world!";
+        });
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementById Example</title>
+</head>
+
+<body>
+    <p id="myParagraph">This is a paragraph.</p>
+    <script>
+        // JavaScript code
+
+        // Access the paragraph element by its ID
+        let paragraph = document.getElementById("myParagraph");
+
+        // Change the content of the paragraph
+        paragraph.textContent = "Paragraph content changed.";
+
+        // Apply a style to the paragraph
+        paragraph.style.color = "red";
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getElementsByTagName Example</title>
+</head>
+<body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+    <script>
+        // JavaScript code
+        // Get all paragraph elements
+        let paragraphs = document.getElementsByTagName("p");
+        // Change the content of the first paragraph
+        paragraphs[0].textContent = "First paragraph changed.";
+        // Iterate through all paragraphs and apply a style
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.fontSize = "20px";
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Position Example</title>
+</head>
+
+<body>
+    <div id="myDiv">This is a positioned div.</div>
+
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 150px;
+            background-color: lightblue;
+        }
+
+        #myDiv {
+            position: static;
+            /* other styles */
+        }
+
+        #myDiv {
+            position: relative;
+            top: 20px;
+            left: 30px;
+            /* other styles */
+        }
+
+        #myDiv {
+            position: absolute;
+            top: 100px;
+            right: 50px;
+            /* other styles */
+        }
+
+        #myDiv {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            /* other styles */
+        }
+
+        #myDiv {
+            position: sticky;
+            top: 100px;
+            /* other styles */
+        }
+    </style>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Chaining Example</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <div id="myDiv">This is a div</div>
+
+  <script>
+    $(document).ready(function() {
+      $("#myDiv").slideUp(500).slideDown(500);
+    });
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Using the XMLHttpRequest Object</h2>
+
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "xmlhttp_info.txt", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
+
+<?php
+function concatenateStrings($string1, $string2) {
+    // Concatenate the two strings using the dot (.) operator
+    $concatenatedString = $string1 . $string2;
+
+    // Print the concatenated string
+    echo $concatenatedString;
+}
+
+// Example usage:
+$str1 = "Hello, ";
+$str2 = "world!";
+
+concatenateStrings($str1, $str2); // Output: Hello, world!
+?>
